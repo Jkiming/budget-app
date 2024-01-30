@@ -14,7 +14,7 @@ class Category:
             largo_desc = len(item["description"])
             espaciado_desc = 1 if (23 - largo_desc) is 0 else (23 - largo_desc)
             texto_final += f"{item["description"][:23] + espaciado_desc * " " + "{:.2f}".format(item["amount"])}\n"
-        texto_final += f"Total:{self.get_balance()}"
+        texto_final += f"Total:{"{:.2f}".format(self.get_balance())}"
         return texto_final
     
     #este metodo crea un diccionario con un monto y una descripcion
