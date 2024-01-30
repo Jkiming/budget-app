@@ -1,7 +1,7 @@
 class Category:
     def __init__(self, ledger):
         self.ledger = ledger
-    
+
     def __str__(self):
         nombre_categoria = [nombre for nombre, valor in locals().items() if valor is self.ledger][0]
         largo_nombre_categoria = len(nombre_categoria)
@@ -64,8 +64,6 @@ class Category:
     #metodo que checkea si el monto es positivo devolviendo True, caso contrario False
     def check_funds(self, amount):
         return False if amount > self.get_balance() else True
-
-
 
 
 def create_spend_chart(categories):
